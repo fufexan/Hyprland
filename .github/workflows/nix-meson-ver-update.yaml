@@ -17,8 +17,16 @@ jobs:
         CRT_VER=$(sed -nEe "/$REGEX/{p;q;}" meson.build | awk -F\' '{print $2}')
         VERSION=$(git show-ref --tags --abbrev | tail -n 1 | tail -c +20)
 
+        printf "current commit: $CRT_REV
+        latest tag commit: $TAG_REV
+        current version: $CRT_VER
+        latest version: $VERSION"
+
         if [[ $TAG_REV = $CRT_REV ]] || [[ $CRT_VER != $VERSION ]]; then
+          printf "running command: sed -Ei \"s/$REGEX/$VERSION/g\" meson.build"
           sed -Ei "s/$REGEX/$VERSION/g" meson.build
+
+          printf "running command: sed -Ei \"s/$REGEX/$VERSION/g\" flake.nix"
           sed -Ei "s/$REGEX/$VERSION/g" flake.nix
         fi
     - uses: stefanzweifel/git-auto-commit-action@v4
