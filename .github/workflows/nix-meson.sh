@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -euo pipefail
+set -euxo pipefail
 
 REGEX="([0-9]+(\.[0-9a-zA-Z]+)+)"
 
