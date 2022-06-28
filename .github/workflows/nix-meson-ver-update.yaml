@@ -10,6 +10,8 @@ jobs:
       uses: actions/checkout@v3
     - name: Update flake and meson version
       run: |
+        set -euo pipefail
+        
         REGEX="([0-9]+(\.[0-9a-zA-Z]+)+)"
 
         CRT_REV=$(git show-ref --tags --head --abbrev | head -n 1 | head -c 7)
@@ -20,13 +22,13 @@ jobs:
         printf "current commit: $CRT_REV
         latest tag commit: $TAG_REV
         current version: $CRT_VER
-        latest version: $VERSION"
+        latest version: $VERSION\n\n"
 
         if [[ $TAG_REV = $CRT_REV ]] || [[ $CRT_VER != $VERSION ]]; then
-          printf "running command: sed -Ei \"s/$REGEX/$VERSION/g\" meson.build"
+          echo "running command: sed -Ei \"s/$REGEX/$VERSION/g\" meson.build"
           sed -Ei "s/$REGEX/$VERSION/g" meson.build
 
-          printf "running command: sed -Ei \"s/$REGEX/$VERSION/g\" flake.nix"
+          echo "running command: sed -Ei \"s/$REGEX/$VERSION/g\" flake.nix"
           sed -Ei "s/$REGEX/$VERSION/g" flake.nix
         fi
     - uses: stefanzweifel/git-auto-commit-action@v4
