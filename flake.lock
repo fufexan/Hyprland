@@ -82,12 +82,13 @@
         ]
       },
       "locked": {
-        "lastModified": 1670202338,
-        "narHash": "sha256-StTfshdAoSxO+t0wRbq1I3YESLFIQWFjGJse5ICV8rk=",
-        "owner": "hyprwm",
-        "repo": "xdg-desktop-portal-hyprland",
-        "rev": "af840a9e0947a79a37a95a9f62062653721e43fa",
-        "type": "github"
+        "lastModified": 1670353168,
+        "narHash": "sha256-uljM3/EloNbZ2qXhKo7Eh+LbzjQcaOcb8f4lHPngFcE=",
+        "ref": "refs/heads/master",
+        "rev": "0d0f0d7b20dc5eb6602f04a11aa2f44c3b718b71",
+        "revCount": 241,
+        "type": "git",
+        "url": "file:///home/mihai/Documents/code/git/xdg-desktop-portal-hyprland"
       },
       "original": {
         "owner": "hyprwm",

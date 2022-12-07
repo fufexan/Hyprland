@@ -77,6 +77,8 @@
       waybar-hyprland = prev.waybar.overrideAttrs (oldAttrs: {
         mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
       });
+
+      xdg-desktop-portal-hyprland = inputs.xdph.packages.${prev.system}.override {inherit hyprland;};
     };
 
     packages = genSystems (system:
