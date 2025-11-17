@@ -371,13 +371,13 @@ I18n::CI18nEngine::CI18nEngine() {
     huEngine->registerEntry("fa_IR", TXT_KEY_NOTIF_WIDE_COLOR_NOT_10B, "مانیتور {name}: گسترهٔ رنگ وسیع فعال است اما نمایشگر در حالت ۱۰ بیتی نیست.");
 
     // fr_FR (French)
-    huEngine->registerEntry("fr_FR", TXT_KEY_ANR_TITLE, "L'application ne répond plus");
+    huEngine->registerEntry("fr_FR", TXT_KEY_ANR_TITLE, "L'application ne répond plus!");
     huEngine->registerEntry("fr_FR", TXT_KEY_ANR_CONTENT, "L'application {title} - {class} ne répond plus.\nQue voulez-vous faire?");
     huEngine->registerEntry("fr_FR", TXT_KEY_ANR_OPTION_TERMINATE, "Forcer l'arrêt");
     huEngine->registerEntry("fr_FR", TXT_KEY_ANR_OPTION_WAIT, "Attendre");
     huEngine->registerEntry("fr_FR", TXT_KEY_ANR_PROP_UNKNOWN, "(inconnu)");
 
-    huEngine->registerEntry("fr_FR", TXT_KEY_PERMISSION_REQUEST_UNKNOWN, "Une application <b>{app}</b> demande une autorisation inconnue.");
+    huEngine->registerEntry("fr_FR", TXT_KEY_PERMISSION_REQUEST_UNKNOWN, "Un application <b>{app}</b> demande une autorisation inconnu.");
     huEngine->registerEntry("fr_FR", TXT_KEY_PERMISSION_REQUEST_SCREENCOPY, "Une application <b>{app}</b> tente de capturer votre écran.\n\nVoulez-vous l'y autoriser?");
     huEngine->registerEntry("fr_FR", TXT_KEY_PERMISSION_REQUEST_PLUGIN, "Une application <b>{app}</b> tente de charger un module : <b>{plugin}</b>.\n\nVoulez-vous l'y autoriser?");
     huEngine->registerEntry("fr_FR", TXT_KEY_PERMISSION_REQUEST_KEYBOARD, "Un nouveau clavier a été détecté : <b>{keyboard}</b>.\n\nVouslez-vous l'autoriser à fonctioner?");
