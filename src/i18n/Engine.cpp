@@ -301,7 +301,7 @@ I18n::CI18nEngine::CI18nEngine() {
     huEngine->registerEntry("es", TXT_KEY_NOTIF_WIDE_COLOR_NOT_10B, "Monitor {name}: la gama de colores amplia está habilitada, pero la pantalla no está en modo de 10-bit.");
 
     // fr_FR (French)
-    huEngine->registerEntry("fr_FR", TXT_KEY_ANR_TITLE, "L'application ne répond plus");
+    huEngine->registerEntry("fr_FR", TXT_KEY_ANR_TITLE, "L'application ne répond plus!");
     huEngine->registerEntry("fr_FR", TXT_KEY_ANR_CONTENT, "L'application {title} - {class} ne répond plus.\nQue voulez-vous faire?");
     huEngine->registerEntry("fr_FR", TXT_KEY_ANR_OPTION_TERMINATE, "Forcer l'arrêt");
     huEngine->registerEntry("fr_FR", TXT_KEY_ANR_OPTION_WAIT, "Attendre");
